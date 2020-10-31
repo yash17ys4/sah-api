@@ -4,69 +4,73 @@ const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('sah_guest_details', {
     id: {
+      autoIncrement: true,
       type: DataTypes.INTEGER(11),
-      allowNull: true
+      allowNull: false,
+      primaryKey: true
     },
     app_num: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.STRING(50),
+      allowNull: false
     },
     name: {
       type: DataTypes.STRING(100),
-      allowNull: true
+      allowNull: false
     },
     organisation: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.STRING(50),
+      allowNull: false
     },
     address: {
-      type: DataTypes.STRING(500),
-      allowNull: true
+      type: DataTypes.STRING(100),
+      allowNull: false,
+      defaultValue: "null"
     },
     gender: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.CHAR(1),
+      allowNull: false,
+      defaultValue: "n"
     },
     contact: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.STRING(20),
+      allowNull: false
     },
     email: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.STRING(150),
+      allowNull: false
     },
     group_count: {
-      type: DataTypes.INTEGER(11),
-      allowNull: true
+      type: DataTypes.INTEGER(2),
+      allowNull: false
     },
     room_alloted: {
       type: DataTypes.STRING(100),
-      allowNull: true
+      allowNull: false,
+      defaultValue: "Pending"
     },
     check_in: {
       type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      allowNull: false
     },
     check_out: {
       type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: "0000-00-00 00:00:00"
+      allowNull: true
     },
     identity_card: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.STRING(150),
+      allowNull: true,
+      defaultValue: "Null"
     },
     typeid: {
       type: DataTypes.STRING(100),
-      allowNull: true
+      allowNull: false
     },
     idcardno: {
       type: DataTypes.STRING(100),
-      allowNull: true
+      allowNull: false
     },
     paid: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.INTEGER(11),
       allowNull: true
     }
   }, {

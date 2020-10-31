@@ -5,11 +5,11 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('sah_booking_details', {
     room_id: {
       type: DataTypes.INTEGER(11),
-      allowNull: true
+      allowNull: false
     },
     app_num: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.STRING(50),
+      allowNull: false
     }
   }, {
     sequelize,
