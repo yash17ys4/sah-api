@@ -1,4 +1,5 @@
-const SahTariff = require('../models/sah_tariff');
+const SahTariff = require('../models/SahTariff');
+const { body, validationResult } = require('express-validator');
 
 module.exports.getTariff = (req, res) => {
     SahTariff.findAll()
