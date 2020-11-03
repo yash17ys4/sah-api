@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
 });
 
 //routes
+app.use('/registrations', require('./routes/sahRegistrationDetails'));
 app.use('/rooms', require('./routes/sahRoomDetails'));
 app.use('/tariff', require('./routes/tariff'));
 
