@@ -1,8 +1,7 @@
-/* jshint indent: 2 */
-
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('sah_authority_details', {
+const db = require('../config/database');
+
+const  SahAuthorityDetails = db.define('sah_authority_details', {
     sl_no: {
       type: DataTypes.STRING(50),
       allowNull: false,
@@ -57,8 +56,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   }, {
-    sequelize,
     tableName: 'sah_authority_details',
     timestamps: false
-    });
-};
+  });
+
+module.exports = SahAuthorityDetails;

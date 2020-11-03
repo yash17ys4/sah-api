@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const sahRoomDetails = db.define('sah_room_details', {
+const SahRoomDetails = db.define('sah_room_details', {
   id: {
     autoIncrement: true,
     type: Sequelize.INTEGER(11),
@@ -48,4 +48,4 @@ const sahRoomDetails = db.define('sah_room_details', {
   timestamps: false
 });
 
-module.exports = sahRoomDetails;
+module.exports = SahRoomDetails;
