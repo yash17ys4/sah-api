@@ -1,6 +1,6 @@
 const express = require('express');
 const { body, validationResult, sanitizeParam } = require('express-validator');
-const sahRoomDetailsControllers = require('../controllers/sahRoomDetailsComtrollers');
+const sahRoomDetailsControllers = require('../controllers/sahRoomDetailsControllers');
 
 const router = express.Router();
 
