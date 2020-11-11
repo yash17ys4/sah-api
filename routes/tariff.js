@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get('/', tariffControllers.getTariff);
 
+// router.get('/latest', tariffControllers.currentTariff);
+
 router.post('/update', [
     body('ac_suite').notEmpty(),
     body('ac_suite_conc').notEmpty(),

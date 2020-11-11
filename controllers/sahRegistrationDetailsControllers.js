@@ -13,6 +13,7 @@ module.exports.getRegistrations = (req, res) => {
 };
 
 module.exports.createRegistration = (req, res) => {
+    // console.log(req.body);
     SahRegistrationDetails.create({
         app_num: req.body.app_num,
         app_date: req.body.app_date,
@@ -62,4 +63,5 @@ module.exports.createRegistration = (req, res) => {
         res.status(200).json({ message: "registration succesful" });
         console.log(rowCreate);
     })
+    .catch(err => console.log(err));
 };
